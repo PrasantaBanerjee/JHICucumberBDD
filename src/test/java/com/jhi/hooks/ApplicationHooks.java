@@ -35,7 +35,7 @@ public class ApplicationHooks {
 	public void closeBrowser() {
 		if (driver != null) {
 			driver.quit();
-			System.out.println(browser + " Browser closed.");
+			System.out.println(browser + " Browser closed.\n");
 		}
 	}
 
