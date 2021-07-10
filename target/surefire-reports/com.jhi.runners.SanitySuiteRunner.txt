@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.jhi.runners.SanitySuiteRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.113 s - in com.jhi.runners.SanitySuiteRunner
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 92.359 s - in com.jhi.runners.SanitySuiteRunner
