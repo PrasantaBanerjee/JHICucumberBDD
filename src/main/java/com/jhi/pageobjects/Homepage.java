@@ -23,6 +23,10 @@ public class Homepage extends DriverFactory {
 		return getDriver().findElement(By.xpath("//div[text()='John Hancock Investment Management']/ancestor::a"));
 	}
 	
+	public WebElement nonUSInvestorsLink() {
+		return getDriver().findElement(By.xpath("(//a[contains(text(),'Non-U.S. investors')])[1]"));
+	}	
+
 	public String getUrl() {
 		return getDriver().getCurrentUrl();
 	}

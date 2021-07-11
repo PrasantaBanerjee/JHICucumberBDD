@@ -20,7 +20,6 @@ public class ApplicationHooks {
 	@Before(order = 0)
 	public void launchBrowser() {
 		driver = DriverFactory.init(browser);
-		System.out.println(browser + " Browser launched.");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}

@@ -13,6 +13,7 @@ public class Test_Homepage extends Homepage {
 	private String facebookLink;
 	private String linkedInLink;
 	private String youtubeLink;
+	private String nonUSInvestorsLink;
 	private String url;
 	private CommonFunctions cf = new CommonFunctions();
 
@@ -23,54 +24,19 @@ public class Test_Homepage extends Homepage {
 		}
 	}
 
-	@When("User clicks on the Log In button")
-	public void user_clicks_on_the_log_in_button() {
-		System.out.println("On Login page");
-	}
-
-	@When("Enters Valid E-Mail Address and Password")
-	public void enters_valid_e_mail_address_and_password() {
-		System.out.println("Enter userid and password");
-	}
-
-	@When("Clicks on Login button")
-	public void clicks_on_login_button() {
-		System.out.println("Clicks login btn");
-	}
-
-	@Then("User Login should be successful")
-	public void user_login_should_be_successful() {
-		System.out.println("Login done");
-	}
-
 	@When("User clicks on Non-US Investors Link")
 	public void user_clicks_on_non_us_investors_link() {
-		System.out.println("Clicked Non US");
+		url = cf.openLinkInNewTabAndSwitch(getDriver(), nonUSInvestorsLink(), nonUSInvestorsLink);
 	}
 
 	@Then("User should be navigated to Manulife Investment Management Link {string}")
 	public void user_should_be_navigated_to_manulife_investment_management_link(String string) {
-		System.out.println("navigated to " + string);
+		cf.validateSocialMediaLink(getDriver(), string, url);
 	}
 
 	@When("User scrolls down to From Twitter section")
 	public void user_scrolls_down_to_from_twitter_section() {
 		System.out.println("Scrolling down to \"From Twitter\" section.");
-	}
-
-	@When("Clicks on the Links")
-	public void clicks_on_the_links() {
-		System.out.println("Clicked on the tweet link.");
-	}
-
-	@Then("User should be navigated to Twitter status page")
-	public void user_should_be_navigated_to_twitter_status_page() {
-		System.out.println("Navigated to twitter status");
-	}
-
-	@When("Clicks on the More Tweets Link on right-side")
-	public void clicks_on_the_more_tweets_link_on_right_side() {
-		System.out.println("Clicked on the link");
 	}
 
 	@When("Clicks on the Twitter Link")
